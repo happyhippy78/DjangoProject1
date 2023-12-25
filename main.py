@@ -1,2 +1,2 @@
 print('hello')
-lkkklk
+print('bbb')
