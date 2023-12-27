@@ -10,10 +10,12 @@ class FormUser(models.Model):
     email = models.EmailField(
         verbose_name = "Почта",
         null = False,
+        unique = True,
+        db_index = True
     )
     age = models.IntegerField(
         verbose_name = "Возраст",
-        null = False,
+        null = False
     )
 
     def __str__(self):
