@@ -4,5 +4,8 @@ from . import views
 
 
 urlpatterns = [
-    re_path(r'home/?$', views.HomePage.as_view(), name="url-home")
+    re_path(r'home/?$', views.HomePage.as_view(), name="url-home"),
+    re_path(r'news/?$', views.NewsPage.as_view(), name="url-news"),
+    re_path(r'offer/?$', views.OfferPage.as_view(), name="url-offer"),
+    re_path(r'contacts/?$', views.ContactsPage.as_view(), name="url-contacts"),
 ]

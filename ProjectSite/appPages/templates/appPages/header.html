@@ -3,10 +3,10 @@
     <div class="header_content">
         <img src="{% static 'appPages/img/logo.png' %}" class="logo">
         <div class="menu">
-            <a href="">Главная</a>
-            <a href="">Новости</a>
-            <a href="">Предложение</a>
-            <a href="">Контакты</a>
+            <a href="{% url 'url-home' %}">Главная</a>
+            <a href="{% url 'url-news' %}">Новости</a>
+            <a href="{% url 'url-offer' %}">Предложение</a>
+            <a href="{% url 'url-contacts' %}">Контакты</a>
         </div>
         <a href="" class="feedback">Оставить завку</a>
     </div>
