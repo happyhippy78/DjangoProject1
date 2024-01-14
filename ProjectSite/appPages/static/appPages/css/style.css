@@ -78,3 +78,26 @@ table {
     padding: 0.7vw 1.4vw;
     border-radius: 3vw;
 }
+.footer {
+    width: 100%;
+    background-color: rgb(181, 188, 194);
+    
+}
+.footer_content {
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    height: 5.903vw;
+}
+.footer_content .menu_footer {
+    text-decoration: none;
+    font-family: 'Segoe UI';
+    font-size: 1vw;
+    font-weight: 500;
+    margin-right: 1vw;
+    color: #333;
+    align-items: center;
+    justify-content: space-between;
+}

@@ -17,3 +17,4 @@ class ContactsPage(View):
         return render(request, 'appPages/contacts/index.html')
 
 
+
