@@ -3,10 +3,18 @@
     <div class="header_content">
         <img src="{% static 'appPages/img/logo.png' %}" class="logo">
         <div class="menu">
-            <a href="{% url 'url-home' %}">Главная</a>
-            <a href="{% url 'url-news' %}">Новости</a>
-            <a href="{% url 'url-offer' %}">Предложение</a>
-            <a href="{% url 'url-contacts' %}">Контакты</a>
+            <a class="
+                {% if block_css == 'home' %}active{% endif %}
+            " href="{% url 'url-home' %}">Главная</a>
+            <a class="
+                {% if block_css == 'news' %}active{% endif %}
+            " href="{% url 'url-news' %}">Новости</a>
+            <a class="
+                {% if header.block_css == 'offer' %}active{% endif %}
+            " href="{% url 'url-offer' %}">Предложение</a>
+            <a class="
+                {% if block_css == 'contacts' %}active{% endif %}
+            " href="{% url 'url-contacts' %}">Контакты</a>
         </div>
         <a href="" class="feedback">Оставить завку</a>
     </div>
