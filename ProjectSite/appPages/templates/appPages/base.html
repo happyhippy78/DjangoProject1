@@ -4,6 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'appPages/font/stylesheet.css' %}">
+    <link rel="stylesheet" href="{% static 'appPages/css/reset_css.css' %}">
     <link rel="stylesheet" href="{% static 'appPages/css/style.css' %}">
     <title>
         {% block title %}{% endblock %}
@@ -12,9 +14,8 @@
 
 <body>
     {% include 'appPages/header.html' %}
-    {% include 'appPages/footer.html' %}
     {% block content %}{% endblock %}
-    
+    {% include 'appPages/footer.html' %}
     
 </body>
 </html>
