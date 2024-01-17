@@ -1,27 +1,24 @@
 from django.db import models
+from django.core.exceptions import ValidationError
 import datetime
 
 
-class News(models.Model):
-    title = models.CharField(
-        'Заголовок',
-        null=False,
-        max_length=200,
+class ContentBanner(models.Model):
+    title = models.CharField (
+        "Название",
+        max_length = 100,
+        null = False
     )
-    content = models.TextField(
-        'Содержание',
-        null=True,
-        blank=True
+    desc = models.TextField(
+        "Описание",
+        null = False
     )
-    date = models.DateTimeField(
-        'Дата',
-        default=datetime.datetime.today,
-        null=False
+    number = models.IntegerField(
+        "Порядковый номер",
+        null = True,
+        blank = True
     )
-
-    def __str__(self):
-        return self.title
-
-    class Meta:
-        verbose_name = 'новость'
-        verbose_name_plural = 'Новости'
+    def clean(self):
+        super().clean()
+        if ContentBanner.objects.count() > 3 and not self.pk:
+            raise ValidationError("Максимальное количество достигнуто. Всего доступно: 3")
