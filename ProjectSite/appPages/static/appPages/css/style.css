@@ -121,10 +121,30 @@ header {
     align-items: center;
     gap: 1.333vw;
     font-size: 1.111vw;
-    
+    color:rgb(255, 255, 255);
 }
 
 .banner__content-feedback svg{
     width: 0.8vw;
     height: 0.694vw;
+}
+.footer {
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    background-color: rgb(173, 188, 189);
+    padding: 20px 10px;
+    margin-top: 30px;
+    
+}
+.footer_content {
+    color: #062840;
+    text-align: center;
+    font-size: 0.972vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2.083vw;
+    text-decoration: none;
+    padding: 0;
+    
 }
