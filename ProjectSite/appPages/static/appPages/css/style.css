@@ -20,7 +20,7 @@ header {
     align-items: center;
 }
 
-.header__content-logo {
+.header__content-logo, .footer__content-logo {
     height: 2.431vw;
 }
 
@@ -132,11 +132,19 @@ header {
     width: 100%;
     border-bottom: 1px solid #F2F2F2;
     background-color: rgb(173, 188, 189);
-    padding: 20px 10px;
-    margin-top: 30px;
+    
     
 }
 .footer_content {
+    display: flex;
+    margin: 0 auto;
+    width: 100vw;
+    height: 5.556vw;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.footer_content-menu  {
     color: #062840;
     text-align: center;
     font-size: 0.972vw;
@@ -146,5 +154,4 @@ header {
     margin-right: 2.083vw;
     text-decoration: none;
     padding: 0;
-    
 }

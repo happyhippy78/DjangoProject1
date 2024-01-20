@@ -1,9 +1,11 @@
 {% load static %}
 <footer class="footer">
     <div class="footer_content">
-        Сбербанк
-        © Artem Torg®
-        Условия использования
-        Политика конфиденциальности
+        <img src="{% static 'appPages/img/logo-artem.svg' %}" class="footer__content-logo">
+        <div class="footer_content-menu">
+            © Artem Torg®
+            <a href="">Условия использования</a>
+            <a href="">Политика конфиденциальности</a>
+        </div>
     </div>
 </footer>
