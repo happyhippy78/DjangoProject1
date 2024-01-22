@@ -14,16 +14,20 @@ header {
 .header__content {
     display: flex;
     margin: 0 auto;
-    width: 100vw;
+    width: 90vw;
     height: 5.556vw;
     justify-content: space-between;
     align-items: center;
 }
 
-.header__content-logo, .footer__content-logo {
+.header__content-logo, .footer_content-logo {
     height: 2.431vw;
 }
 
+.header__content-menu {
+    padding: 0;
+    margin: 0;
+}
 .header__content-menu a {
     color: #062840;
     text-align: center;
@@ -81,11 +85,11 @@ header {
 .banner__content h1 {
     color: #FFF;
     width: 55.625vw;
-    font-size: 3.056vw;
+    font-size: 2.917vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    padding: 6.944vw 0 0 3.472vw;
+    padding: 6.944vw 0 0 4.514vw;
 }
 
 .banner__content h1 span {
@@ -93,39 +97,38 @@ header {
 }
 
 .banner__content h6 {
-    padding: 0.694vw 0 0 3.472vw;
+    padding: 0.694vw 0 0.347vw 4.514vw;
     color: #FFF;
-    font-size: 1.667vw;
+    font-size: 1.25vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
 }
 .banner__content p {
-    margin-left: 3.472vw;
-    margin-top: 1.389vw;
-    font-weight: 600;
-    color: #FFF;
-    font-size: 1.667vw;
+    margin-left: 4.514vw;
+    margin-top: 1.528vw;
+    font-weight: 500;
+    color: #fff;
+    font-size: 1.111vw;
 }
-.banner__content p span {
+.banner__content p span{
     color: #22A0D9;
 }
-.banner__content-feedback {
+.banner__content-feedback{
     background-color: #22A0D9;
-    /* padding: 10px 15px; */
-    margin-left: 3.472vw;
+    padding: 0.694vw 1.042vw;
+    margin-left: 4.514vw;
     margin-top: 2.083vw;
     border: none;
-    border-radius: 8vw;
+    border-radius: 4.167vw;
+    color: #fff;
     display: flex;
     align-items: center;
-    gap: 1.333vw;
+    gap: 0.347vw;
     font-size: 1.111vw;
-    color:rgb(255, 255, 255);
 }
-
 .banner__content-feedback svg{
-    width: 0.8vw;
+    width: 0.833vw;
     height: 0.694vw;
 }
 .footer {
@@ -138,13 +141,13 @@ header {
 .footer_content {
     display: flex;
     margin: 0 auto;
-    width: 100vw;
+    width: 90vw;
     height: 5.556vw;
     justify-content: space-between;
     align-items: center;
     
 }
-.footer_content-menu  {
+.footer_content-menu a{
     color: #062840;
     text-align: center;
     font-size: 0.972vw;

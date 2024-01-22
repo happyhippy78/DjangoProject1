@@ -22,3 +22,9 @@ class ContentBanner(models.Model):
         super().clean()
         if ContentBanner.objects.count() > 3 and not self.pk:
             raise ValidationError("Максимальное количество достигнуто. Всего доступно: 3")
+        
+    def __str__(self):
+        return self.title
+    class Meta:
+        verbose_name = 'контент'
+        verbose_name_plural = 'Баннер'
