@@ -1,13 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.views import View
-from .models import ContentBanner
+from .models import ContentBanner, AboutMe, Documets
 
 
 class HomePage(View):
     def get(self, request):
+        
         data = {
             'banner':ContentBanner.objects.order_by("number"),
+            'about_me':AboutMe.objects.first(),
+            'documents':Documets.objects.all()
         }
         return render(request, 'appPages/home/index.html', data)
 

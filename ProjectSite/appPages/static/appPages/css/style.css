@@ -158,3 +158,78 @@ header {
     text-decoration: none;
     padding: 0;
 }
+
+.conteiner{
+    width: 90vw;
+    margin: 8vw auto 0;
+}
+.conteiner-title{
+    color: #062840;
+    font-size: 2.222vw;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+.conteiner-title span{
+    color: #22A0D9;
+}
+.about-me {
+    width: 100%;
+    background-color: #fff;
+    border-radius: 1.333vw;
+    box-shadow: 0.667vw 0.667vw 10.667vw 0vw rgba(0, 32, 51, 0.05);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2.778vw;
+}
+.about-me img{
+    width: 28.667vw;
+}
+.about-me__content {
+    width: 55vw;
+    margin-top: 40px;
+}
+.about-me__content h3{
+    font-size: 2.667vw;
+    font-weight: 600;
+    
+}
+.about-me__content p{
+    width: 45vw;
+    margin-top: 1vw;
+    line-height: 140%;
+    font-size: 1vw;
+}
+.about-me__content h6{
+    margin-top: 1vw;
+    font-size: 1.4vw;
+    font-weight: 600;
+}
+.footer {
+    width: 100%;
+    border-bottom: 1px solid #F2F2F2;
+    background-color: rgb(173, 188, 189);
+    
+    
+}
+.footer_content {
+    display: flex;
+    margin: 0 auto;
+    width: 90vw;
+    height: 5.556vw;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.footer_content-menu a{
+    color: #062840;
+    text-align: center;
+    font-size: 0.972vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-right: 2.083vw;
+    text-decoration: none;
+    padding: 0;
+}
