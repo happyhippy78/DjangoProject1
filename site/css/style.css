@@ -206,3 +206,31 @@ header {
     font-size: 1.4vw;
     font-weight: 600;
 }
+.document{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.543vw;
+    /* justify-content: space-between; */
+}
+.document-title{
+    display: flex;
+    align-items: center;
+    font-size: 1.25vw;
+    gap: 0.556vw;
+    color: black;
+    font-weight: 500;
+}
+.document-title svg{
+    width: 0.386vw;
+    height: 0.772vw;
+}
+.document a {
+    /* margin-left: 20px; */
+    background-color: #22A0D9;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.772vw 1.543vw;
+    font-size: 1.235vw;
+    border-radius: 4.63vw;
+    
+}

@@ -161,7 +161,7 @@ header {
 
 .conteiner{
     width: 90vw;
-    margin: 8vw auto 0;
+    margin: 4.167vw auto 0;
 }
 .conteiner-title{
     color: #062840;
@@ -232,4 +232,32 @@ header {
     margin-right: 2.083vw;
     text-decoration: none;
     padding: 0;
+}
+.document{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.543vw;
+    /* justify-content: space-between; */
+}
+.document-title{
+    display: flex;
+    align-items: center;
+    font-size: 1.25vw;
+    gap: 0.556vw;
+    color: black;
+    font-weight: 500;
+}
+.document-title svg{
+    width: 0.386vw;
+    height: 0.772vw;
+}
+.document a {
+    /* margin-left: 20px; */
+    background-color: #22A0D9;
+    text-decoration: none;
+    color: #fff;
+    padding: 0.772vw 1.543vw;
+    font-size: 1.235vw;
+    border-radius: 4.63vw;
+    
 }
