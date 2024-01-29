@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from django.http import JsonResponse # отображение словаря для API
+from django.views import View
 
-# Create your views here.
+
+class HomeKey(View):
+    def get(self, request):
+        return JsonResponse({
+            'status':200
+        })
