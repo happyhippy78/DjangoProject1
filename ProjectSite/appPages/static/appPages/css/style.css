@@ -20,7 +20,7 @@ header {
     align-items: center;
 }
 
-.header__content-logo, .footer_content-logo {
+.header__content-logo, .footer__content-logo {
     height: 2.431vw;
 }
 
