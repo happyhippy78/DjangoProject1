@@ -12,12 +12,32 @@ class Category(models.Model):
         verbose_name = 'категорию'
         verbose_name_plural = 'Категории'
 
-class Product(models.Model):
+class Subcategory(models.Model):
     category = models.ForeignKey(
         Category,
         on_delete=models.PROTECT,
         null=False,
         verbose_name = 'Категория'
+    )
+    title = models.CharField(
+        "Названиие подкатегории",
+        max_length = 100,
+        null = False
+    )
+    def __str__(self):
+        return f'Категория: {self.category.title} | Подкатегория: {self.title}'
+    class Meta:
+        verbose_name = 'подкатегорию'
+        verbose_name_plural = 'Подкатегории'
+
+
+class Product(models.Model):
+    subcategory = models.ForeignKey(
+        Subcategory,
+        on_delete=models.PROTECT,
+        null=True,
+        blank =True,
+        verbose_name = 'Подкатегория'
     )
     title = models.TextField(
         'Заголовок',
@@ -32,6 +52,18 @@ class Product(models.Model):
     price = models.FloatField(
         'Стоимость',
         null=False
+    )
+    currency = models.CharField(
+        'Валюта',
+        null=False,
+        max_length = 50,
+        choices = [
+            ('RU', 'Рубль'),
+            ('USD', 'Доллар'),
+            ('CHINA', 'Юань'),
+            ('EU', 'Евро')
+        ],
+        default = 'RU'
     )
     def __str__(self):
         return self.title
