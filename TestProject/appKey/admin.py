@@ -1,5 +1,7 @@
 from django.contrib import admin
 from .models import Category, Product, Subcategory, ProductPhotos
+from django_summernote.admin import SummernoteModelAdmin
+
 
 # @admin.register(Category)
 # class CategoryAdmin(admin.ModelAdmin):
@@ -36,10 +38,11 @@ class ProductPhotosStacked(admin.StackedInline):
     extra = 0
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(SummernoteModelAdmin):
     inlines = [ProductPhotosStacked]
     list_display = ['id', 'subcategory', 'title', 'price']
     list_display_links = ['subcategory', 'title', ]    
     raw_id_fields = ['subcategory',]
+    summernote_fields = ('desc')
     class Meta:
         model = Product
