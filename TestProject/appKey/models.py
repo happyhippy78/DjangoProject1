@@ -75,7 +75,7 @@ class Product(models.Model):
 class ProductPhotos(models.Model):
     product = models.ForeignKey(
         Product,
-        on_delete=models.PROTECT,
+        on_delete=models.CASCADE,
         null=True,
         blank =True,
         verbose_name = 'Продукт'
@@ -87,7 +87,7 @@ class ProductPhotos(models.Model):
         upload_to='ProductPhotos'
     )
     def __str__(self):
-        return str(self.photo)
+        return str(self.photo.url)
     class Meta:
         verbose_name = 'фото товара'
         verbose_name_plural = 'Фотографии товаров'
