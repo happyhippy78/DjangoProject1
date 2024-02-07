@@ -8,7 +8,21 @@
         {% csrf_token %}
         <input name="method" type="text" value="addCategory" hidden>
         <input name="text" type="text" placeholder="Введите категорию: ">
-        <button>Добавить</button>
+        <button>Добавить категорию</button>
     </form>
 
+    <form action="{% url 'urlHomeKey' %}" method="post">
+        {% csrf_token %}
+        <input name="method" type="text" value="updateCategory" hidden>
+        <input name="text" type="text" placeholder="Введите категорию: ">
+        <input name="new_text" type="text" placeholder="Введите категорию: ">
+        <button>Обновить категорию</button>
+    </form>
+
+    <form action="{% url 'urlHomeKey' %}" method="post">
+        {% csrf_token %}
+        <input name="method" type="text" value="deleteCategory" hidden>
+        <input name="text" type="text" placeholder="Введите категорию: ">
+        <button>Удалить категорию</button>
+    </form>
 {% endblock %}

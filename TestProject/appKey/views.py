@@ -15,4 +15,12 @@ class HomeKey(View):
             Category.objects.create(
                 title = request.POST['text']
             )
+        if request.POST['method'] == 'updateCategory':
+            Category.objects.filter(title = request.POST['text']).update(
+                title = request.POST['new_text']
+            )
+        if request.POST['method'] == 'deleteCategory':
+            Category.objects.filter(
+                title = request.POST['text']).delete(
+            )
         return redirect('urlHomeKey')

@@ -27,10 +27,10 @@ class CategoryAdmin(admin.ModelAdmin):
     class Meta:
         model = Category # родитель
 
-@admin.register(ProductPhotos)
-class ProductPhotosAdmin(admin.ModelAdmin):
-    list_display = ['id', 'photo']
-    list_display_links = ['photo',]
+# @admin.register(ProductPhotos)
+# class ProductPhotosAdmin(admin.ModelAdmin):
+#     list_display = ['id', 'photo']
+#     list_display_links = ['photo',]
     
 
 class ProductPhotosStacked(admin.StackedInline):
