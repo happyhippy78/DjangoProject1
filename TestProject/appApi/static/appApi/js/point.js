@@ -1,9 +1,28 @@
 $(document).ready(function (){
+    function submit_email(e){
+        e.preventDefault();
+        let form = $(this);
+        let len = form.find('input[name="len"]').val();
+        let csrftoken = form.find('input[name="csrfmiddlewaretoken"]').val();
+
+        $.ajax({
+            type: 'POST',
+            url: '/api',
+            data: {
+                csrfmiddlewaretoken: csrftoken,
+                count_email: len,
+                action: 'generate-email'
+            }
+        })
+    }
+    $('#form_generate_email').submit(submit_email)
+
     $('.send-btn').click(function (){
         $.ajax({
             type: 'POST',
             url: '/api',
             data: {
+                action: 'generate-password',
                 len_password: $('#len_password').val(), 
                 count_password: $('#count_password').val(), 
                 csrfmiddlewaretoken: $('meta[name="csrf-token"]').attr('content')
