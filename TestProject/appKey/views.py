@@ -55,3 +55,14 @@ class ProductPage(View):
         else:
             return redirect('urlCategorys')
         
+class FullProductPage(View):
+    def get(self, request, id):
+        product = Product.objects.filter(id=id)
+        if product:
+            data = {
+                'title': product.first().title,
+                'cards': Product.objects.filter(product=id).values('desc', 'photo')
+                }
+            return render(request, 'appKey/home/full-product.html', data)
+        else:
+            return redirect('urlProduct')

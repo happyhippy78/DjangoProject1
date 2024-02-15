@@ -1,0 +1,13 @@
+{% extends 'appKey/base.html' %}
+
+{% block title %}{{title}}{% endblock %}
+
+{% block content %}
+    {% for value in cards %}
+        <div style="background-color: #313a8d; color:aliceblue; border-radius: 10px;">
+            <h1>{{value.title}}</h1>
+            <p>{{value.desc}}  {{value.photo}}</p>
+            
+        </div>
+    {% endfor %}
+{% endblock %}
