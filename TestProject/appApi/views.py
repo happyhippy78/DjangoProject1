@@ -3,6 +3,8 @@ from django.views import View
 from django.http import JsonResponse
 import random
 from fake_email import Email
+from mimesis import Person
+from mimesis.locales import Locale
 
 class ApiHome(View):
     def get(self, request):
@@ -17,10 +19,16 @@ class ApiHome(View):
         return JsonResponse(data)
     
     def generate_email(self, request):
+        data_email = []
         count_email = request.POST['count_email']
-        mail=Email().Mail()['mail']
-        print(mail)
-        return {}
+        person = Person(Locale.EN)
+        for i in range(int(count_email)):
+            mail=person.email()
+            data_email.append(mail)
+        return {
+            'status': 'ok',
+            'data_email': data_email
+        }
 
 
     def generate_password(self, request):

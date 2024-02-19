@@ -19,6 +19,7 @@ ALLOWED_HOSTS = []
 INSTALLED_APPS = [
     'appKey',
     'appApi',
+    'appAuth',
     'django_summernote',
     'django.contrib.admin',
     'django.contrib.auth',
