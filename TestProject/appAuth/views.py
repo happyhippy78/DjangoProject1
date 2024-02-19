@@ -9,11 +9,11 @@ class PageAuth(View):
         print(request.user.is_authenticated)
         return render(request, 'appAuth/auth/index.html')
     def post(self, request):
-        login = request.POST['login']
-        password = request.POST['password']
+        _login = request.POST['login']
+        _password = request.POST['password']
         user = authenticate(
-            username = login,
-            password = password
+            username = _login,
+            password = _password
         )
         status = ''
         if user is not None:
