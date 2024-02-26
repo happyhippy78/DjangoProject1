@@ -20,6 +20,9 @@ INSTALLED_APPS = [
     'appKey',
     'appApi',
     'appAuth',
+    "admin_interface",
+    "colorfield",
+    # 'grappelli',
     'django_summernote',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -28,6 +31,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+X_FRAME_OPTIONS = "SAMEORIGIN"
+SILENCED_SYSTEM_CHECKS = ["security.W019"]
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +58,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                
             ],
         },
     },

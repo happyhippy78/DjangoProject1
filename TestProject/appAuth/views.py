@@ -42,8 +42,8 @@ class PageReg(View):
         except:
             status += 'ok' 
             User.objects.create(
-                name = name,
-                surname = surname, 
+                first_name = name,
+                last_name = surname, 
                 email = email,
                 username = login,
                 password = password

@@ -44,6 +44,7 @@ $(document).ready(function (){
                     
                 },
                 success: function (response) {
+                    console.log(response)
                     if (response.status == 'ok'){
                         $('#result').text("Регистрация прошла успешно!")
                     } else if (response.status == 'NoLogin'){
