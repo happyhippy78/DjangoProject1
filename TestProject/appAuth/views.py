@@ -3,10 +3,23 @@ from django.views import View
 from django.http import JsonResponse
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.models import User
+from .models import ContentNews
 
 class PageAuth(View):
     def get(self, request):
-        print(request.user.is_authenticated)
+        # print(request.user.is_authenticated)
+        # try:
+        #     ContentNews.objects.get(title='Традиционный весенний забег «Химкинский лес» пройдет в Подмосковье в апреле 13')
+        # except:
+        #     ContentNews.objects.create(title='Традиционный весенний забег «Химкинский лес» пройдет в Подмосковье в апреле 13', name_url = "newnews")
+        get_news, created_news = ContentNews.objects.get_or_create(
+            title='Традиционный весенний забег «Химкинский лес» пройдет в Подмосковье в апреле 13',
+            name_url = 'newnews'
+        )
+        print(request.GET.get('last_name', None))
+        print(request.GET.get('name', None))
+        print(get_news)
+        print(created_news)
         return render(request, 'appAuth/auth/index.html')
     def post(self, request):
         _login = request.POST['login']
