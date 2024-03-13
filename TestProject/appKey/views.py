@@ -66,3 +66,13 @@ class FullProductPage(View):
             return render(request, 'appKey/home/full-product.html', data)
         else:
             return redirect('urlProduct')
+        
+class Search(View):
+    def post (self, request):
+        name_search = request.POST['search']
+        product = list(Product.objects.filter(title__iregex=name_search).values('title', 'id'))
+        sub_category = list(Subcategory.objects.filter(title__iregex=name_search).values('title', 'id'))
+        return JsonResponse({
+            'status': 'ok',
+            'product': product + sub_category
+        })
