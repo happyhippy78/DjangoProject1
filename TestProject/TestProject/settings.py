@@ -17,6 +17,7 @@ ALLOWED_HOSTS = []
 
 
 INSTALLED_APPS = [
+    'appResponse',
     'appKey',
     'appApi',
     'appAuth',
@@ -30,6 +31,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
 ]
 
 X_FRAME_OPTIONS = "SAMEORIGIN"
