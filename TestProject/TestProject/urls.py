@@ -13,6 +13,7 @@ urlpatterns = [
     path('data/', include('appResponse.urls')),
     path('shop/', include('appShop.urls')),
     path('render/', include('appRenderHtml.urls')),
+    path('method-auth/', include('appMethodAuth.urls')),
 
 ]
 print(path('render/', include('appRenderHtml.urls')))

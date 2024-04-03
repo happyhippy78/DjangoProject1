@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+</head>
+<body>
+    <h1>Регистрация</h1>
+    <form action="{% url 'urlRegPage' %}" method="post">
+        {% csrf_token %}
+        <input type="text" name="first_name" placeholder="Имя: ">
+        <input type="text" name="last_name" placeholder="Фамилия: ">
+        <input type="text" name="username" placeholder="Придумайте ник: ">
+        <input type="password" name="password" placeholder="Придумайте пароль: ">
+        <button type="submit">Зарегистрироваться</button>
+    </form>
+</body>
+</html>
